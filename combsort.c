@@ -5,13 +5,13 @@ int main(){
     int Auxiliar, TamanhoVetor;
 
     //escolha o tamanho do vetor
-    printf("Escolha o tamanho do vetor: "); //Solicita o tamanho do vetor
-    scanf("%d", &TamanhoVetor);//Recebe o valor solicitado
+    printf("Escolha o tamanho do vetor: ");
+    scanf("%d", &TamanhoVetor);
     printf("\n");
     int Vetor[TamanhoVetor];
 
-    //L� o valor de cada posi��o do Vetor
-    for(Auxiliar = 0; Auxiliar < TamanhoVetor; Auxiliar++){ //Auxiliar recebe zero, 
+    //Le o valor de cada posicao do Vetor
+    for(Auxiliar = 0; Auxiliar < TamanhoVetor; Auxiliar++){
         printf("Vetor[%d]: ", Auxiliar);
         scanf("%d", &Vetor[Auxiliar]);
     }
@@ -30,12 +30,12 @@ int CombSort(int Vetor[], int TamanhoVetor){
         printf("\n\n");
     }
 
-    //compara elmentos de posi��o N com elementos da posi�ao n+Gap
+    //compara elmentos de posicao N com elementos da Posicao n+Gap
     //O valor de Gap diminui a cada itera��o
     for(Gap = TamanhoVetor/1.3; Gap != 0; Gap/=1.3)
         for(n = 0; n < TamanhoVetor-Gap; n++){
 
-        //caso n > n+Gap, os valores s�o trocados:
+        //caso n > n+Gap, os valores sao trocados:
         if(Vetor[n] > Vetor[n+Gap]){
             Auxiliar = Vetor[n+Gap];
             Vetor[n+Gap] = Vetor[n];
@@ -44,7 +44,7 @@ int CombSort(int Vetor[], int TamanhoVetor){
         }
         Verificacoes++;
 
-        //Mostra os numeros sendo comparados na itera��o atual
+        //Mostra os numeros sendo comparados na iteracao atual
         for(Posicao = 0; Posicao < TamanhoVetor; Posicao++){
             if(Posicao == n || Posicao == n+Gap)
                 printf("<%d>", Vetor[Posicao]);
